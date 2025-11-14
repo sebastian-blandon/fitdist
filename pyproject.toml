@@ -1,0 +1,31 @@
+[project]
+name = "fitdist"
+version = "0.1.0"
+description = "Evaluate and visualize different probability distributions fitted to data."
+readme = "README.md"
+authors = [
+    { name = "Sebastián Blandón Londoño", email = "67570216+sebastian-blandon@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.4",
+    "pandas>=2.3.3",
+    "scipy>=1.16.3",
+]
+
+[project.scripts]
+fitdist = "fitdist:main"
+
+[build-system]
+requires = ["uv_build>=0.9.8,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+    "ruff>=0.14.5",
+]
